@@ -1,0 +1,144 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/normal/raleway-regular-webfont.eot');
+    src: url('../fonts/normal/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/normal/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/normal/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/normal/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/normal/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/bold/raleway-bold-webfont.eot');
+    src: url('../fonts/bold/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bold/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/bold/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/bold/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/bold/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*MAIN STYLES*/
+
+* {
+	font-family: "ralewayregular", Arial, sans-serif;
+}
+
+.main_width {
+	width: 1055px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.color_word {
+	color: #26c7a9;
+	font-family: "ralewaybold", Arial, sans-serif;
+}
+
+/*HEADER*/
+
+header {
+	background-color: black;
+	height: 40px;
+	margin: 0 auto;
+}
+
+header h1 {
+	font-size: 13px;
+	color: white;
+	float:left;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+
+.nav_bar {
+	float: right;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.nav_bar li {
+	display: inline-block;
+	padding-right: 30px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+/*SLIDER SECTION*/
+
+.slider {
+	height: 400px;
+	background: #cbcfd4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #cbcfd4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #cbcfd4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #cbcfd4); /* For Firefox 3.6 to 15 */
+    clear: both;
+}
+
+#box1, #box4 {
+	width:40px;
+}
+
+#box2, #box3 {
+	width: 400px;
+}
+
+.slider div {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 35px;
+}
+
+#box3{
+	margin-left: 60px;
+}
+
+#box4 {
+	margin-left: 100px;
+}
+
+
+.arrow {
+	color: #26c7a9;
+	font-size: 70px;
+}
+
+.slider h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 35px;
+	width: 380px;
+}
+
+.slider_text {
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+	width: 380px;
+}
+
+.button_slider {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	width: 200px;
+	height: 30px;
+	padding: 5px 30px;
+	background-color: #26c7a9;
+	border-radius: 10px;
+	margin-left: 60px;
+}
