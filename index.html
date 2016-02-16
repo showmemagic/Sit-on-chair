@@ -20,7 +20,7 @@
     <section class = "slider">
         <article class = "mainWidth">
         	<div id = "box1">
-        		<p class = "arrow">&lt;</p>
+        		<a class = "arrow">&lt;</a>
         	</div>
         	<div id = "box2">
         		<img src = "./images/black_chair.png">
@@ -28,77 +28,159 @@
         	<div id = "box3">
         		<h2>Sit <span class = "colorWord">on</span> our <span class = "colorWord">chair</span></h2>
         		<p class = "sliderText">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut milestie a, ultricies porta urna.</p>
-        		<p class = "buttonSlider"><a href = "#">Zobacz więcej</a></p>
+        		<a class = "buttonSlider" href = "#">Zobacz więcej</a>
         	</div>
         	<div id = "box4">
-        		<p class = "arrow">&gt;</p>
+        		<a class = "arrow">&gt;</a>
         	</div>
         </article>
     </section>
 
-    <section class = "chairs">
+    <section class = "products">
         <article class = "mainWidth">
-            <div>
-                <img src = "./images/box1_img.jpg">
+            <div class = "productsImg">
+                <a href = "#">
+                    <img src = "./images/box1_img.jpg">
+                    <div class = "transparentStripe">
+                        <h3>Chair CLAIR</h3>
+                    </div>
+                </a>
             </div>
-            <div>
-                <img src = "./images/box2_img.jpg">
+            <div class = "productsImg">
+                <a href = "#">
+                    <img src = "./images/box2_img.jpg">
+                    <div class = "transparentStripe">
+                        <h3>Chair MARGARITA</h3>
+                    </div>
+                </a>
             </div>
-            <div id ="whiteBox">
+            <div class ="productsText">
+                <h3>Finds all inputs</h3>
+                <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when chlicking the checkboxes since no click events have been linked</p>
+                <p>Notice there is no change when chlicking the checkboxes since no click events have been</p>
             </div>
+        </article>
     </section>
 
     <section class = "prices">
         <article class = "mainWidth">
             <h3>Cennik</h3>
-            <div class = "pricePlans">
+            <div class = "pricePlans" id = "basicPlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
-                <div class = "basicPlan">
-                    <h4>Basic plan</h4>
-                    <p class="circle">85</span><span class = "upperPrice">99</span></p>
+                <div>
+                    <p>Basic plan</p>
+                    <div class="circle">
+                        <span class = "priceNumber">85<sup>99</sup></span>
+                        <span class = "priceUnit">pln/msc</span>
+                    </div>
                     <ul>
-                        <li>Zakup towaaru + dowóz</li>
+                        <li>Zakup towaru + dowóz</li>
                         <li>Serwis</li>
+                        <li class = "hidden">x</li>
+                        <li class = "hidden">x</li>
                     </ul>
-                    <p class = "pricesButton">Dołącz</p>
+                    <a class = "pricesButton">Dołącz</a>
                 </div>
             </div>
 
-            <div class = "pricePlans">
+            <div class = "pricePlans" id = "standardPlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
-                <div class = "standardPlan">
-                    <h4>Standard plan</h4>
-                    <p class="circle">95</span><span class = "upperPrice">99</span></p>
+                <div>
+                    <p>Standard plan</p>
+                    <div class="circle">
+                        <span class = "priceNumber">95<sup>99</sup></span>
+                        <span class = "priceUnit">pln/msc</span> 
+                    </div>
                     <ul>
-                        <li>Zakup towaaru + dowóz</li>
+                        <li>Zakup towaru + dowóz</li>
                         <li>Serwis</li>
                         <li>Gwarancja 5 lat</li>
+                        <li class = "hidden">x</li>
                     </ul>
-                    <p class = "pricesButton">Dołącz</p>
+                    <a class = "pricesButton">Dołącz</a>
                 </div>
             </div>
 
-            <div class = "pricePlans">
+            <div class = "pricePlans" id = "advancePlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
-                <div class = "advancePlan">
-                    <h4>Advance plan</h4>
-                    <p class="circle">211<span class = "upperPrice">00</span></p>
+                <div>
+                    <p>Advance plan</p>
+                    <div class="circle">
+                        <span class = "priceNumber">211<sup>00</sup></span>
+                        <span class = "priceUnit">pln/msc</span>
+                    </div>
                     <ul>
-                        <li>Zakup towaaru + dowóz</li>
+                        <li>Zakup towaru + dowóz</li>
                         <li>Serwis</li>
                         <li>Gwarancja 6 lat</li>
                         <li>Porady projektanta</li>
                     </ul>
-                    <p class = "pricesButton">Dołącz</p>
+                    <a class = "pricesButton">Dołącz</a>
                 </div>
             </div>
         </article>
     </section>
+
+    <section class = "contact">
+        <article class = "mainWidth">
+            <h3>Kontakt</h3>
+            <form>
+                <div class = "leftForm">
+                    <input type = "text" name = "name" id = "name" placeholder = "Imię" size="30">
+                    <input type = "text" name = "email" id = "email" placeholder = "email" size="30">
+                    <textarea name = "message" id = "message" placeholder = "Wiadomość" rows = "5" cols = "30"></textarea>
+                </div>
+                <div class = "rightForm">
+                    <div class = "imgForm">
+                        <img src = "./images/red_chair.png" alt = "red chair">
+                    </div>
+                    <div class = "checkbox">
+                        <input type = "checkbox" name = "dataPolicyAgreement" id= "dataPolicyAgreement" checked>
+                        <label for = "dataPolicyAgreement">Zgadzam się na przetwarzanie danych osobowych</label>
+                    </div>
+                    <div>
+                        <input type = "submit" value = "Wyślij">
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <div class = "mainWidth">
+            <p class = "leftFooter">Copyright 2014 | All Rights Reserved. Sit On Chair</p>
+            <div class = "rightFooter">
+                <ul class = "social">
+                    <li>
+                        <a href = "#">
+                            <img src = "./images/flickr.png" alt = "flickr">
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <img src = "./images/vimeo.png" alt = "vimeo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <img src = "./images/pinterest.png" alt = "pinterest">
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "#">
+                            <img src = "./images/twitter.png" alt = "twitter">
+                        </a>
+                    </li>
+                </ul>
+                <p class = logo>sit <span class = "highlight">on</span> chair</p>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
