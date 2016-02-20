@@ -2,15 +2,21 @@
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Sit on chair</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" type="text/javascript"></script>
 </head>
 <body>
     <header>
         <nav class = "mainWidth">
     	<h1><a href = "#">Sit <span class = "colorWord">on</span> chair</a></h1>
     		<ul class = "navBar">
-    			<li><a href ="#">O firmie</a></li>
+    			<li id = "dropDownMenu"><a href ="#">O firmie</a></li>
+                    <ul id = "aboutUs">
+                        <li><a href = "#">Aktualności</a></li>
+                        <li><a href = "#">Nasz team</a></li>
+                        <li><a href = "#">Historia</a></li>
+                    </ul>
     			<li><a href ="#">Galeria</a></li>
     			<li><a href ="#">Kontakt</a></li>
     		</ul>
@@ -19,19 +25,44 @@
 
     <section class = "slider">
         <article class = "mainWidth">
-        	<div id = "box1">
-        		<a class = "arrow">&lt;</a>
+        	<div class = "box1">
+        		<a class = "arrow" id = "prevButton">&lt;</a>
         	</div>
-        	<div id = "box2">
-        		<img src = "./images/black_chair.png">
-        	</div>
-        	<div id = "box3">
-        		<h2>Sit <span class = "colorWord">on</span> our <span class = "colorWord">chair</span></h2>
-        		<p class = "sliderText">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut milestie a, ultricies porta urna.</p>
-        		<a class = "buttonSlider" href = "#">Zobacz więcej</a>
-        	</div>
-        	<div id = "box4">
-        		<a class = "arrow">&gt;</a>
+            <div id = "sliderContainer">
+                <ul>
+                    <li>
+                    	<div class = "box2">
+                    		<img src = "./images/black_chair.png">
+                    	</div>
+                    	<div class = "box3">
+                    		<h2>Sit <span class = "colorWord">on</span> our <span class = "colorWord">chair</span></h2>
+                    		<p class = "sliderText">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut milestie a, ultricies porta urna.</p>
+                    		<a class = "buttonSlider" href = "#">Zobacz więcej</a>
+                    	</div>
+                    </li>
+                    <li>
+                        <div class = "box2">
+                            <img src = "./images/orange.png">
+                        </div>
+                        <div class = "box3">
+                            <h2>Sit <span class = "colorWord">on</span> our <span class = "colorWord">chair</span></h2>
+                            <p class = "sliderText">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut milestie a, ultricies porta urna.</p>
+                            <a class = "buttonSlider" href = "#">Zobacz więcej</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class = "box2">
+                            <img src = "./images/red.png">
+                        </div>
+                        <div class = "box3">
+                            <h2>Sit <span class = "colorWord">on</span> our <span class = "colorWord">chair</span></h2>
+                            <p class = "sliderText">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut milestie a, ultricies porta urna.</p>
+                            <a class = "buttonSlider" href = "#">Zobacz więcej</a>
+                        </div>
+                    </li>
+            </div>
+        	<div class = "box4">
+        		<a class = "arrow" id = "nextButton">&gt;</a>
         	</div>
         </article>
     </section>
@@ -65,7 +96,7 @@
     <section class = "prices">
         <article class = "mainWidth">
             <h3>Cennik</h3>
-            <div class = "pricePlans" id = "basicPlan">
+            <div class = "pricePlans basicPlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
@@ -85,7 +116,7 @@
                 </div>
             </div>
 
-            <div class = "pricePlans" id = "standardPlan">
+            <div class = "pricePlans standardPlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
@@ -105,7 +136,7 @@
                 </div>
             </div>
 
-            <div class = "pricePlans" id = "advancePlan">
+            <div class = "pricePlans advancePlan">
                 <div class = "outerCircle">
                     <div class = "innerCircle"></div>
                 </div>
@@ -127,6 +158,72 @@
         </article>
     </section>
 
+    <section class = "planner">
+        <article class = "mainWidth">
+            <h3 class = "h3left">Skomponuj swoje krzesło</h3>
+            <h3 class = "h3right">Podsumowanie</h3>
+            <form>
+                <div class = "leftPlanner">
+                    <select name="chair" id = "chair">
+                        <option data-price = "0", value = "chairs" selected>Wybierz rodzaj</option>
+                        <option data-price = "1500" value = "Clair">Chair Clair</option>
+                        <option data-price = "2000" value = "Margarita">Chair Margarita</option>
+                        <option data-price = "2500" value = "Selena">Chair Selena</option>
+                    </select>
+                    <select name = "color" id = "color">
+                        <option selected>Wybierz kolor</option>
+                        <option value = "red">Czerwony</option>
+                        <option value = "black">Czarny</option>
+                        <option value = "orange">Pomarańczowy</option>
+                    </select>
+                    <select name = "material" id = "material">
+                        <option selected>Wybierz materiał</option>
+                        <option value = "tkanina">Tkanina</option>
+                        <option value = "skóra">Skóra</option>
+                    </select>
+                    <div class = "checkboxPlanner">
+                        <input type = "checkbox" data-transportPrice = "150" id = "transport" name = "transport">
+                        <label for = "transport">Transport</label>
+                    </div>
+                </div>
+                <div class = "middlePlanner">
+                    <img src = "./images/red_chair.png" alt = "red chair">
+                </div>
+                <div class = "rightPlanner">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id  = "chairDisplay">Twój fotel</th>
+                                <th>&nbsp;<th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td>Suma</th>
+                                <td id = "totalCost">&nbsp;</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td id = "colorDisplay">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td id = "materialDisplay">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td id = "transportDisplay">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type = "submit" value = "zamawiam" class = "buttonPlanner">
+                </div>
+            </form>
+        </article>
+    </section>
+
     <section class = "contact">
         <article class = "mainWidth">
             <h3>Kontakt</h3>
@@ -140,12 +237,12 @@
                     <div class = "imgForm">
                         <img src = "./images/red_chair.png" alt = "red chair">
                     </div>
-                    <div class = "checkbox">
-                        <input type = "checkbox" name = "dataPolicyAgreement" id= "dataPolicyAgreement" checked>
+                    <div class = "checkboxContact">
+                        <input type = "checkbox" name = "dataPolicyAgreement" id= "dataPolicyAgreement">
                         <label for = "dataPolicyAgreement">Zgadzam się na przetwarzanie danych osobowych</label>
                     </div>
                     <div>
-                        <input type = "submit" value = "Wyślij">
+                        <input type = "submit" value = "Wyślij" class = "contactButton">
                 </div>
             </form>
         </article>
