@@ -60,6 +60,7 @@
                             <a class = "buttonSlider" href = "#">Zobacz więcej</a>
                         </div>
                     </li>
+                </ul>
             </div>
         	<div class = "box4">
         		<a class = "arrow" id = "nextButton">&gt;</a>
@@ -162,19 +163,19 @@
         <article class = "mainWidth">
             <h3 class = "h3left">Skomponuj swoje krzesło</h3>
             <h3 class = "h3right">Podsumowanie</h3>
-            <form>
+            <form method = "post">
                 <div class = "leftPlanner">
                     <select name="chair" id = "chair">
-                        <option data-price = "0", value = "chairs" selected>Wybierz rodzaj</option>
-                        <option data-price = "1500" value = "Clair">Chair Clair</option>
-                        <option data-price = "2000" value = "Margarita">Chair Margarita</option>
-                        <option data-price = "2500" value = "Selena">Chair Selena</option>
+                        <option data-price = "0" value = "Twój fotel" selected>Wybierz rodzaj</option>
+                        <option data-price = "1500" value = "Chair Clair">Chair Clair</option>
+                        <option data-price = "2000" value = "Chair Margarita">Chair Margarita</option>
+                        <option data-price = "2500" value = "Chair Selena">Chair Selena</option>
                     </select>
                     <select name = "color" id = "color">
                         <option selected>Wybierz kolor</option>
-                        <option value = "red">Czerwony</option>
-                        <option value = "black">Czarny</option>
-                        <option value = "orange">Pomarańczowy</option>
+                        <option value = "czerwony">Czerwony</option>
+                        <option value = "czarny">Czarny</option>
+                        <option value = "pomarańczowy">Pomarańczowy</option>
                     </select>
                     <select name = "material" id = "material">
                         <option selected>Wybierz materiał</option>
@@ -182,7 +183,7 @@
                         <option value = "skóra">Skóra</option>
                     </select>
                     <div class = "checkboxPlanner">
-                        <input type = "checkbox" data-transportPrice = "150" id = "transport" name = "transport">
+                        <input type = "checkbox" data-transportprice = "150" id = "transport" name = "transport">
                         <label for = "transport">Transport</label>
                     </div>
                 </div>
@@ -199,8 +200,8 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <td>Suma</th>
-                                <td id = "totalCost">&nbsp;</th>
+                                <td>Suma</td>
+                                <td id = "totalCost">&nbsp;</td>
                             </tr>
                         </tfoot>
                         <tbody>
@@ -218,7 +219,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <input type = "submit" value = "zamawiam" class = "buttonPlanner">
+                    <input type = "submit" value = "zamawiam" id = "buttonPlanner">
                 </div>
             </form>
         </article>
@@ -227,7 +228,7 @@
     <section class = "contact">
         <article class = "mainWidth">
             <h3>Kontakt</h3>
-            <form>
+            <form method = "post">
                 <div class = "leftForm">
                     <input type = "text" name = "name" id = "name" placeholder = "Imię" size="30">
                     <input type = "text" name = "email" id = "email" placeholder = "email" size="30">
@@ -239,10 +240,11 @@
                     </div>
                     <div class = "checkboxContact">
                         <input type = "checkbox" name = "dataPolicyAgreement" id= "dataPolicyAgreement">
-                        <label for = "dataPolicyAgreement">Zgadzam się na przetwarzanie danych osobowych</label>
+                        <label for = "dataPolicyAgreement"><span></span>Zgadzam się na przetwarzanie danych osobowych</label>
                     </div>
                     <div>
                         <input type = "submit" value = "Wyślij" class = "contactButton">
+                    </div>
                 </div>
             </form>
         </article>

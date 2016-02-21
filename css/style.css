@@ -679,13 +679,20 @@ footer {
 	padding-bottom: 20px;
 }
 
-.rightPlanner tfoot tr td:first-child {
+.rightPlanner tfoot td:first-child {
 	text-transform: uppercase;
 	border-top: 1px solid #d5d5d5;
 	border-left: none!important;
 }
 
-.buttonPlanner {
+.rightPlanner tfoot td:last-child {
+	color: #24ba9f;
+	text-align: right;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#buttonPlanner {
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 25px;
@@ -702,8 +709,4 @@ footer {
 	color: white;
 	border: none;
 } 
-
-/*NAPRAWIć CZCIONKI W FIREFOXIE
-NAPRAWIć CHECKBOX W FIREFOXIE
-SPRAWDZIć INNE PRZEGLąDARKI? --> SAFARI, EDGE, IE*/
 
